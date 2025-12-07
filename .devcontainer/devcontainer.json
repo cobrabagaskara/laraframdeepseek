@@ -1,0 +1,24 @@
+{
+  "name": "Laravel",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3",
+  "features": {
+    "ghcr.io/devcontainers/features/composer:2": {},
+    "ghcr.com/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug",
+        "editorconfig.editorconfig"
+      ]
+    }
+  },
+  "postCreateCommand": "composer install && cp .env.example .env && php artisan key:generate",
+  "portsAttributes": {
+    "8000": {
+      "label": "Laravel Dev Server"
+    }
+  },
+  "forwardPorts": [8000]
+}
