@@ -1,9 +1,9 @@
 {
-  "name": "Laravel",
+  "name": "Laravel 12 + Filament",
   "image": "mcr.microsoft.com/devcontainers/php:8.3",
   "features": {
     "ghcr.io/devcontainers/features/composer:2": {},
-    "ghcr.com/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:1": {}
   },
   "customizations": {
     "vscode": {
@@ -17,7 +17,7 @@
   "postCreateCommand": "composer install && cp .env.example .env && php artisan key:generate",
   "portsAttributes": {
     "8000": {
-      "label": "Laravel Dev Server"
+      "label": "Laravel App"
     }
   },
   "forwardPorts": [8000]
