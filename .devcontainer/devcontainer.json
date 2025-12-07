@@ -1,24 +1,19 @@
 {
-  "name": "Laravel 12 + Filament",
+  "name": "Laravel Core",
   "image": "mcr.microsoft.com/devcontainers/php:8.3",
-  "features": {
-    "ghcr.io/devcontainers/features/composer:2": {},
-    "ghcr.io/devcontainers/features/node:1": {}
-  },
   "customizations": {
     "vscode": {
       "extensions": [
         "bmewburn.vscode-intelephense-client",
-        "xdebug.php-debug",
-        "editorconfig.editorconfig"
+        "xdebug.php-debug"
       ]
     }
   },
   "postCreateCommand": "composer install && cp .env.example .env && php artisan key:generate",
+  "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {
       "label": "Laravel App"
     }
-  },
-  "forwardPorts": [8000]
+  }
 }
